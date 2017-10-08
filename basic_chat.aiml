@@ -2,29 +2,119 @@
     <category>
         <pattern>HELLO</pattern>
         <template>
-            Well, hello!
-        </template>
-    </category>
-    
-    <category>
-        <pattern>WHAT ARE YOU</pattern>
-        <template>
-            I'm a bot, silly!
+            <random>
+				<li>Hello!</li>
+				<li>Well, hello there.</li>
+				<li>Hi, friend.</li>
+			</random>
         </template>
     </category>
 	
 	<category>
 		<pattern>MY NAME IS *</pattern>
 			<template>
-				Hello <set name="client_1"><star/></set> !
+				Nice to meet you, <set name="name"><star/></set> ! But how old are you ?
 			</template>  
 	</category>
+	
+   	<category>
+		<pattern>I AM * YEARS OLD</pattern>
+			<template>
+				You look very good at <set name="age"><star/></set> years !
+			</template>  
+	</category>
+	
+   <category>
+		<pattern>WHAT DO YOU KNOW ABOUT ME</pattern>
+		    <template>
+				Your name is <get name="name"/> and you are <get name="age"/> years old .
+		    </template>  
+   </category> 
    
    <category>
-      <pattern>WHAT IS MY NAME</pattern>
-		  <template>
-			 Your name is <get name="client_1"/>.
-		  </template>  
+		<pattern>YOU ARE RIGHT I AM MADA</pattern>
+			<that>
+				YOUR NAME IS MADA AND YOU ARE 20 YEARS OLD
+			</that>
+		    <template>
+				What color is your dress?
+		    </template>  
+   </category> 
+
+   <category>
+		<pattern>RED</pattern>
+			<that>
+				WHAT COLOR IS YOUR DRESS
+			</that>
+		    <template>
+				Oh, what a beautiful color! You look good!
+		    </template>  
    </category>  
 
+   <category>
+		<pattern>BLUE</pattern>
+			<that>
+				WHAT COLOR IS YOUR DRESS
+			</that>
+		    <template>
+				Hmm ... I think you should try a red one.
+		    </template>  
+   </category>
+   
+   <category>
+		<pattern>LET US TALK ABOUT *</pattern>
+			<template>
+				<think><set name="topic"><star/></set></think>
+				OK, I like this topic.
+			</template>
+	</category>
+
+	<topic name="colors">
+		<category>
+			<pattern>I PREFER RED DRESSES</pattern>
+				<template>I agree with you, the red color is special.</template>
+		</category>
+	</topic>
+
+	<topic name="length">
+		<category>
+			<pattern>I PREFER LONG DRESSES</pattern>
+				<template>I agree with you, the long dresses are suitable for evening.</template>
+		</category>
+	</topic>
+
+   <category>
+		<pattern>YOU ARE RIGHT I AM ALEX</pattern>
+			<that>
+				YOUR NAME IS ALEX AND YOU ARE 21 YEARS OLD
+			</that>
+		    <template>
+				Do you like pancakes?
+		    </template>  
+   </category>   
+
+	<category>
+		<pattern>YES</pattern>
+			<that>
+				DO YOU LIKE PANCAKES
+			</that>
+			<template>Me too.</template>
+	</category>
+
+	<category>
+		<pattern>NO</pattern>
+			<that>
+				DO YOU LIKE PANCAKES
+			</that>
+			<template>Seriously?? Is hard to believe!</template>
+	</category>
+	
+		<category>
+		<pattern>NO</pattern>
+			<that>
+				DO YOU LIKE PANCAKES
+			</that>
+			<template>Seriously?? Is hard to believe!</template>
+	</category>
+	
 </aiml>

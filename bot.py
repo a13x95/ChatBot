@@ -10,7 +10,7 @@ kernel.respond("LOAD AIML B")
 sessionId = 12345
 sessionData= kernel.getSessionData(sessionId)
 
-kernel.setPredicate("client_1", "Alex", sessionId)
+kernel.setPredicate("name", "Alex", sessionId)
 
 
 # Press CTRL-C to break this loop
