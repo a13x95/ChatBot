@@ -12,4 +12,19 @@
             I'm a bot, silly!
         </template>
     </category>
+	
+	<category>
+		<pattern>MY NAME IS *</pattern>
+			<template>
+				Hello <set name="client_1"><star/></set> !
+			</template>  
+	</category>
+   
+   <category>
+      <pattern>WHAT IS MY NAME</pattern>
+		  <template>
+			 Your name is <get name="client_1"/>.
+		  </template>  
+   </category>  
+
 </aiml>
