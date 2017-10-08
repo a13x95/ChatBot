@@ -1,19 +1,71 @@
 <aiml version="1.0.1" encoding="UTF-8">
-    <category>
-        <pattern>HELLO</pattern>
+
+	<category>
+		<pattern>HELLO</pattern>
         <template>
-            <random>
-				<li>Hello!</li>
-				<li>Well, hello there.</li>
-				<li>Hi, friend.</li>
-			</random>
+            <srai>HI</srai>
         </template>
     </category>
 	
 	<category>
+		<pattern>HELLO THERE </pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+	
+	<category>
+		<pattern>SALUTE</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+	<category>
+        <pattern>HI</pattern>
+		<template>
+            <random>
+				<li>Hello there! What's your name?</li>
+				<li>Hello! What's your name? </li>
+				<li>Well, hello there.What's your name?</li>
+				<li>Hi, friend. What's your name?</li>
+			</random>
+        </template>
+    </category>
+	
+	
+	<category>
 		<pattern>MY NAME IS *</pattern>
 			<template>
-				Nice to meet you, <set name="name"><star/></set> ! But how old are you ?
+				Nice to meet you, <set name="name"><star/></set>! How old are you?
+			</template>  
+	</category>
+
+	<category>
+		<pattern>I AM CALLED *</pattern>
+			<template>
+				Nice to meet you, <set name="name"><star/></set>! How old are you?
+			</template>  
+	</category>
+	
+	<category>
+		<pattern>WHAT IS YOUR NAME</pattern>
+			<template>
+				My name is Basic Bot.
+			</template>  
+	</category>
+	
+	<category>
+		<pattern>WHERE ARE YOU FROM</pattern>
+			<template>
+				I am located near you.
+			</template>
+	</category>
+	
+	<category>
+		<pattern>WHAT IS MY NAME</pattern>
+			<template>
+				Your name is <get name="name"/>
 			</template>  
 	</category>
 	
@@ -21,6 +73,27 @@
 		<pattern>I AM * YEARS OLD</pattern>
 			<template>
 				You look very good at <set name="age"><star/></set> years !
+			</template>  
+	</category>
+	
+	<category>
+		<pattern>* YEARS OLD</pattern>
+			<template>
+				You look very good at <set name="age"><star/></set> years !
+			</template>  
+	</category>
+	
+	<category>
+		<pattern>WHAT IS MY AGE</pattern>
+			<template>
+				You are <get name="age"/> years old!
+			</template>  
+	</category>
+	
+	<category>
+		<pattern>HOW OLD AM I</pattern>
+			<template>
+				You are <get name="age"/> years old!
 			</template>  
 	</category>
 	
@@ -109,7 +182,7 @@
 			<template>Seriously?? Is hard to believe!</template>
 	</category>
 	
-		<category>
+	<category>
 		<pattern>NO</pattern>
 			<that>
 				DO YOU LIKE PANCAKES
