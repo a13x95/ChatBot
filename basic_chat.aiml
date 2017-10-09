@@ -1,5 +1,4 @@
-<aiml version="1.0.1" encoding="UTF-8">
-
+<aiml version="2.0" encoding="UTF-8">
 	<category>
 		<pattern>HELLO</pattern>
         <template>
@@ -33,7 +32,7 @@
         </template>
     </category>
 	
-	
+
 	<category>
 		<pattern>MY NAME IS *</pattern>
 			<template>
@@ -47,42 +46,43 @@
 				Nice to meet you, <set name="name"><star/></set>! How old are you?
 			</template>  
 	</category>
-	
-	<category>
-		<pattern>WHAT IS YOUR NAME</pattern>
-			<template>
-				My name is Basic Bot.
-			</template>  
-	</category>
-	
-	<category>
-		<pattern>WHERE ARE YOU FROM</pattern>
-			<template>
-				I am located near you.
+
+    <category>
+		<pattern>I AM * YEARS OLD</pattern>
+            <template>
+            For <set name="age"><star/></set> years old, you are almost as old as me!
 			</template>
 	</category>
-	
+
 	<category>
-		<pattern>WHAT IS MY NAME</pattern>
-			<template>
-				Your name is <get name="name"/>
-			</template>  
+		<pattern>STUDENT</pattern>
+            <template>
+                At <get name="age"></get> years old you must be in college. What do you study?
+			</template>
 	</category>
-	
-   	<category>
-		<pattern>I AM * YEARS OLD</pattern>
-			<template>
-				You look very good at <set name="age"><star/></set> years !
-			</template>  
-	</category>
-	
+
+	 <category>
+		<pattern>I AM STUDYING * </pattern>
+            <template>
+              If you are studying <set name="ocupation"><star/></set> you must be pretty good with computers. What are your two favorite Brands of PCs?
+			</template>
+	 </category>
+
 	<category>
-		<pattern>* YEARS OLD</pattern>
-			<template>
-				You look very good at <set name="age"><star/></set> years !
-			</template>  
-	</category>
-	
+		<pattern>MY FAVORITE BRANDS ARE *</pattern>
+            <template>
+             You are not the only one cu likes <set name="favorite"><star/></set>
+             Do you want to know what I've learned about you?
+			</template>
+	 </category>
+
+	 <category>
+		<pattern>I WOULD LIKE TO KNOW</pattern>
+            <template>
+             Your name is <get name="name"/>, you are <get name="age"/> of age, you are studying <get name="ocupation"/> and your favorite brands are like <get name="favorite"/>
+			</template>
+	 </category>
+
 	<category>
 		<pattern>WHAT IS MY AGE</pattern>
 			<template>
@@ -103,7 +103,52 @@
 				Your name is <get name="name"/> and you are <get name="age"/> years old .
 		    </template>  
    </category> 
-   
+
+   	<category>
+		<pattern>ADULT</pattern>
+            <template>
+                At <get name="age"></get> years old you must have a job. Where do you work?
+			</template>
+	</category>
+
+	 <category>
+		<pattern>I WORK AT * </pattern>
+            <template>
+                 Hmmm, <set name="job"><star/></set>. On a scale from 1 to 10, how much do you enjoy what you do?
+			</template>
+	 </category>
+
+	 <category>
+		<pattern>I ENJOY MY JOB SOMEWERE AROUND *</pattern>
+            <template>
+                 Intersting, <set name="job_satisfaction"><star/></set>. Do you wanna now what I've learned about you until now?
+			</template>
+	 </category>
+
+	 <category>
+		<pattern>YES</pattern>
+            <template>
+                 Your name is <get name="name"/>, you are <get name="age"/> of age, you work at  <get name="job"/> and on a scale from 1 to 10 you like your job somewere around  <get name="job_satisfaction"/>.
+			</template>
+	 </category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <category>
 		<pattern>YOU ARE RIGHT I AM MADA</pattern>
 			<that>
@@ -188,6 +233,30 @@
 				DO YOU LIKE PANCAKES
 			</that>
 			<template>Seriously?? Is hard to believe!</template>
+	</category>
+
+
+
+
+	<category>
+		<pattern>WHAT IS MY NAME</pattern>
+			<template>
+				Your name is <get name="name"/>
+			</template>
+	</category>
+
+	<category>
+		<pattern>WHAT IS YOUR NAME</pattern>
+			<template>
+				My name is Basic Bot.
+			</template>
+	</category>
+
+	<category>
+		<pattern>WHERE ARE YOU FROM</pattern>
+			<template>
+				I am located near you.
+			</template>
 	</category>
 	
 </aiml>
